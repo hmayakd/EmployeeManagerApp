@@ -8,7 +8,7 @@ namespace EmployeeManager
     {
         static void Main(string[] args)
         {
-            IEmployee[] employees = new IEmployee[2];
+            Employee[] employees = new Employee[2];
             employees[0] = new ContractualEmployee();
             employees[1] = new CasualEmployee();
 

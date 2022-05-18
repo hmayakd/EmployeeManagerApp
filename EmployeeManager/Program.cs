@@ -1,4 +1,6 @@
 ﻿using System;
+using EmployeeManager.Models;
+using EmployeeManager.Interfaces;
 
 namespace EmployeeManager
 {
@@ -6,7 +8,14 @@ namespace EmployeeManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IEmployee[] employees = new IEmployee[2];
+            employees[0] = new ContractualEmployee();
+            employees[1] = new CasualEmployee();
+
+            foreach (IEmployee e in employees)
+            {
+                e.GetEmployeeDetails(1245);
+            }
         }
     }
 }
